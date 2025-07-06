@@ -10,7 +10,7 @@ def download_file(filepath, url):
         file.write(response.content)
 
 def get_filetype(filename):
-    return filename.split('.')[-1].split(':')[0]
+    return filename.split(".")[-1].split(":")[0]
 
 def get_save_path(message, filename):
     return f"C:\\Art\\{message.created_at.strftime("%Y-%m-%d")}_{message.author.name}.{get_filetype(filename)}"
