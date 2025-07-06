@@ -4,9 +4,9 @@ import discord
 CONTENT_TYPES = ["image/png", "image/jpeg", "video/mp4"]
 DEFAULT_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
 
-def download_file(filename, url):
+def download_file(filepath, url):
    response = requests.get(url, params={"User-Agent": DEFAULT_USER_AGENT})
-   with open(filename, mode="wb") as file:
+   with open(filepath, mode="wb") as file:
         file.write(response.content)
 
 def get_filetype(filename):
