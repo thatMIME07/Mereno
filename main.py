@@ -13,7 +13,7 @@ def get_filetype(filename):
     return filename.split(".")[-1].split(":")[0]
 
 def get_save_path(message, filename):
-    return f"C:\\Art\\{message.created_at.strftime("%Y-%m-%d")}_{message.author.name}.{get_filetype(filename)}"
+    return f"C:\\Art\\{message.created_at.strftime("%Y-%m-%d_%H%M%S")}_{message.author.name}.{get_filetype(filename)}"
 
 class Mereno(discord.Client):
     async def on_ready(self):
