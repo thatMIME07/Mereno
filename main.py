@@ -1,6 +1,6 @@
 import discord
 
-import utils
+from utils import *
 
 TAVERN_ID = 782347341667631144
 GALLERY_ID = 786628157838589952
